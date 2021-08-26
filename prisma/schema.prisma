@@ -1,0 +1,19 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Subscription {
+  phoneNumber String @id
+}
+
+model ProcessedTweet {
+  id       String   @id
+  account  String
+  postedAt DateTime
+  sentAt   DateTime @default(now())
+}

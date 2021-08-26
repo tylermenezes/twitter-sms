@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@prisma/client": "2.30.0",
+    "chunk-text": "^2.0.1",
+    "dotenv": "^10.0.0",
+    "luxon": "^2.0.2",
+    "twilio": "^3.67.1",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "prisma": "2.30.0"
+  }
+}
