@@ -53,6 +53,7 @@ async function fetch() {
           parseTwitterDate(tweet.created_at).toJSDate()
         );
       } catch (ex) { continue; }
+      if (tweet.full_text[0] === '@') continue;
       await Promise.all(subscribers.map(async (s) => sendTweet(s, tweet.full_text)));
     }
   }
